@@ -1,0 +1,180 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ─── Simba & Loki Brand Palette ─────────────────────────────────── */
+:root {
+  --brand-black:   #070707;
+  --brand-gold:    #B88A44;
+  --brand-gold-light: #D4A85A;
+  --brand-gold-muted: #8A6630;
+  --brand-cream:   #F4EFE7;
+  --brand-charcoal: #1A1A1A;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-heading);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Brand colors exposed as Tailwind tokens */
+  --color-brand-black:   var(--brand-black);
+  --color-brand-gold:    var(--brand-gold);
+  --color-brand-gold-light: var(--brand-gold-light);
+  --color-brand-gold-muted: var(--brand-gold-muted);
+  --color-brand-cream:   var(--brand-cream);
+  --color-brand-charcoal: var(--brand-charcoal);
+}
+
+/* ─── Light Mode ────────────────────────────────────────────────────
+   Cream-based luxury feel with gold as the primary action colour.    */
+:root {
+  --background:            oklch(from #F4EFE7 l c h);   /* brand cream */
+  --foreground:            oklch(from #1A1A1A l c h);   /* brand charcoal */
+
+  --card:                  oklch(1 0 0);                 /* pure white card surface */
+  --card-foreground:       oklch(from #1A1A1A l c h);
+
+  --popover:               oklch(1 0 0);
+  --popover-foreground:    oklch(from #1A1A1A l c h);
+
+  /* Primary = Gold */
+  --primary:               oklch(from #B88A44 l c h);
+  --primary-foreground:    oklch(1 0 0);                 /* white text on gold */
+
+  /* Secondary = soft cream */
+  --secondary:             oklch(from #EDE8DF l c h);
+  --secondary-foreground:  oklch(from #1A1A1A l c h);
+
+  --muted:                 oklch(from #EDE8DF l c h);
+  --muted-foreground:      oklch(from #6B5E4A l c h);
+
+  /* Accent = deeper gold */
+  --accent:                oklch(from #D4A85A l c h);
+  --accent-foreground:     oklch(from #070707 l c h);
+
+  --destructive:           oklch(0.577 0.245 27.325);
+
+  --border:                oklch(from #D9D2C6 l c h);
+  --input:                 oklch(from #D9D2C6 l c h);
+  --ring:                  oklch(from #B88A44 l c h);   /* gold focus ring */
+
+  /* Charts — gold gradient scale */
+  --chart-1:               oklch(from #D4A85A l c h);
+  --chart-2:               oklch(from #B88A44 l c h);
+  --chart-3:               oklch(from #8A6630 l c h);
+  --chart-4:               oklch(from #5C4420 l c h);
+  --chart-5:               oklch(from #1A1A1A l c h);
+
+  --radius: 0.5rem;
+
+  --sidebar:               oklch(from #EDE8DF l c h);
+  --sidebar-foreground:    oklch(from #1A1A1A l c h);
+  --sidebar-primary:       oklch(from #B88A44 l c h);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent:        oklch(from #F4EFE7 l c h);
+  --sidebar-accent-foreground: oklch(from #1A1A1A l c h);
+  --sidebar-border:        oklch(from #D9D2C6 l c h);
+  --sidebar-ring:          oklch(from #B88A44 l c h);
+}
+
+/* ─── Dark Mode ─────────────────────────────────────────────────────
+   Near-black canvas, gold as the hero accent, cream for body text.   */
+.dark {
+  --background:            oklch(from #070707 l c h);   /* brand black */
+  --foreground:            oklch(from #F4EFE7 l c h);   /* brand cream */
+
+  --card:                  oklch(from #1A1A1A l c h);   /* brand charcoal */
+  --card-foreground:       oklch(from #F4EFE7 l c h);
+
+  --popover:               oklch(from #1A1A1A l c h);
+  --popover-foreground:    oklch(from #F4EFE7 l c h);
+
+  /* Primary = Gold (unchanged — same pop in both modes) */
+  --primary:               oklch(from #B88A44 l c h);
+  --primary-foreground:    oklch(from #070707 l c h);
+
+  /* Secondary = charcoal lift */
+  --secondary:             oklch(from #2A2A2A l c h);
+  --secondary-foreground:  oklch(from #F4EFE7 l c h);
+
+  --muted:                 oklch(from #2A2A2A l c h);
+  --muted-foreground:      oklch(from #9C8E7A l c h);
+
+  --accent:                oklch(from #D4A85A l c h);   /* bright gold accent */
+  --accent-foreground:     oklch(from #070707 l c h);
+
+  --destructive:           oklch(0.704 0.191 22.216);
+
+  --border:                oklch(from #B88A44 l c h / 20%);
+  --input:                 oklch(1 0 0 / 10%);
+  --ring:                  oklch(from #B88A44 l c h);
+
+  /* Charts — same gold scale, visible on dark bg */
+  --chart-1:               oklch(from #D4A85A l c h);
+  --chart-2:               oklch(from #B88A44 l c h);
+  --chart-3:               oklch(from #8A6630 l c h);
+  --chart-4:               oklch(from #5C4420 l c h);
+  --chart-5:               oklch(from #F4EFE7 l c h);
+
+  --sidebar:               oklch(from #1A1A1A l c h);
+  --sidebar-foreground:    oklch(from #F4EFE7 l c h);
+  --sidebar-primary:       oklch(from #B88A44 l c h);
+  --sidebar-primary-foreground: oklch(from #070707 l c h);
+  --sidebar-accent:        oklch(from #2A2A2A l c h);
+  --sidebar-accent-foreground: oklch(from #F4EFE7 l c h);
+  --sidebar-border:        oklch(1 0 0 / 10%);
+  --sidebar-ring:          oklch(from #B88A44 l c h);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
