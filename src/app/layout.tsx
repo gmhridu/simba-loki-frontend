@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Jost } from "next/font/google";
+import { Cinzel, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/shared/theme-provider";
 
-export const cormorant = Cormorant_Garamond({
+export const cinzel = Cinzel({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
   variable: "--font-heading",
 });
 
-export const jost = Jost({
+export const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-sans",
+  variable: "--font-body",
 });
 
 export const metadata: Metadata = {
@@ -29,7 +26,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jost.variable} ${cormorant.variable} h-full antialiased`}
+      className={`${cinzel.variable} ${inter.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">

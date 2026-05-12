@@ -2,9 +2,15 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Menu, X, Search, User, ShoppingBag } from "lucide-react";
+import { X } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 import { cn } from "@/lib/utils";
+import {
+  CartIcon,
+  MenuIcon,
+  SearchIcon,
+  UserIcon,
+} from "@/components/icons/nav-icons";
 
 const NAV_LINKS = [
   { label: "SHOP", href: "/shop" },
@@ -54,7 +60,7 @@ export function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Announcement Bar */}
-      <div className="dark:bg-brand-black bg-brand-gold-muted text-brand-cream dark:text-brand-gold py-2.5 text-center text-xs tracking-[0.08em] font-medium">
+      <div className="dark:bg-black dark:border-b dark:border-border bg-primary text-brand-cream dark:text-brand-gold py-2.5 text-center text-xs tracking-widest font-medium">
         FREE PREMIUM SHIPPING • 30 DAY RETURNS • 2 YEAR WARRANTY
       </div>
 
@@ -86,7 +92,7 @@ export function Navbar() {
               className="md:hidden text-foreground"
               aria-label="Toggle menu"
             >
-              {mobileOpen ? <X size={28} /> : <Menu size={28} />}
+              {mobileOpen ? <X size={28} /> : <MenuIcon />}
             </button>
 
             {/* Center Logo - Using Your Exact Code */}
@@ -129,15 +135,15 @@ export function Navbar() {
               <ThemeToggle />
 
               <button className="text-foreground hover:text-brand-gold transition-colors">
-                <Search size={20} strokeWidth={1.6} />
+                <SearchIcon />
               </button>
 
               <button className="hidden sm:block text-foreground hover:text-brand-gold transition-colors">
-                <User size={20} strokeWidth={1.6} />
+                <UserIcon />
               </button>
 
               <button className="relative text-foreground hover:text-brand-gold transition-colors">
-                <ShoppingBag size={20} strokeWidth={1.6} />
+                <CartIcon />
                 <span className="absolute -top-1.5 -right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-brand-gold text-[10px] font-semibold text-white">
                   0
                 </span>
