@@ -60,7 +60,7 @@ export function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Announcement Bar */}
-      <div className="dark:bg-black dark:border-b dark:border-border bg-primary text-brand-cream dark:text-brand-gold py-2.5 text-center text-xs tracking-widest font-medium">
+      <div className="dark:bg-black dark:border-b dark:border-border bg-[#504031] text-soft-gold py-2.5 text-center text-xs tracking-widest font-medium">
         FREE PREMIUM SHIPPING • 30 DAY RETURNS • 2 YEAR WARRANTY
       </div>
 
