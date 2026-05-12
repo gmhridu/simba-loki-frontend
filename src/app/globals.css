@@ -292,17 +292,24 @@
 @layer components {
   .primary-button {
     @apply inline-flex items-center justify-center rounded-xl transition-all duration-300;
-    background: linear-gradient(135deg,
-        var(--soft-gold),
-        var(--gold),
-        var(--dark-gold));
+    background: linear-gradient(135deg, var(--soft-gold), var(--gold), var(--dark-gold));
     color: var(--black);
-    padding: 16px 34px;
+    padding: 10px 20px;
+    /* mobile default — smaller */
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    /* mobile default — smaller */
     font-weight: 700;
     border: 1px solid var(--soft-gold);
+  }
+
+  @media (min-width: 768px) {
+    .primary-button {
+      padding: 16px 34px;
+      /* restore desktop size */
+      font-size: 0.8rem;
+    }
   }
 
   .primary-button:hover {
@@ -315,10 +322,10 @@
     background: transparent;
     color: var(--champagne);
     border: 1px solid rgba(184, 138, 68, 0.55);
-    padding: 16px 34px;
+    padding: 12px 22px;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    font-size: 0.8rem;
+    font-size: 0.72rem;
     font-weight: 700;
   }
 
@@ -362,17 +369,24 @@
   }
 }
 
+
+
 button {
   @apply cursor-pointer;
 }
 
+
+
 .header-bg {
   background-image: url('/images/home/hero-image.png');
-  background-size: cover;        /* Try 'contain' if you want full image */
+  background-size: cover;
+  /* Try 'contain' if you want full image */
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: scroll; /* Important: removes fixed effect */
+  background-attachment: scroll;
+  /* Important: removes fixed effect */
   min-height: 700px;
-  height: 100vh;                 /* or use aspect ratio */
+  height: 100vh;
+  /* or use aspect ratio */
   width: 100%;
 }
