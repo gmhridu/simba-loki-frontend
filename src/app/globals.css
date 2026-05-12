@@ -361,3 +361,18 @@
     color: var(--deep-charcoal);
   }
 }
+
+button {
+  @apply cursor-pointer;
+}
+
+.header-bg {
+  background-image: url('/images/home/hero-image.png');
+  background-size: cover;        /* Try 'contain' if you want full image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll; /* Important: removes fixed effect */
+  min-height: 700px;
+  height: 100vh;                 /* or use aspect ratio */
+  width: 100%;
+}

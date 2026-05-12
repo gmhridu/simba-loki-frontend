@@ -26,10 +26,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cinzel.variable} ${inter.variable} h-full antialiased`}
+      className={`${cinzel.variable} ${inter.variable}`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">
+      <body>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
