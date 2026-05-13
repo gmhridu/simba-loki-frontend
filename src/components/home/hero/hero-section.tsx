@@ -7,7 +7,7 @@ import {
   ShieldCheckIcon,
 } from "lucide-react";
 import Image from "next/image";
-import { HeroBottom } from "./hero-bottom";
+import { HeroBottom } from "@/components/home/hero/hero-bottom";
 
 const heroData = [
   {
@@ -51,7 +51,6 @@ export function HeroSection() {
         />
         <div className="absolute inset-0 bg-linear-to-r from-black via-black/80 to-black/20 md:to-transparent" />
       </div>
-
 
       <div className="shrink-0 h-[106px] md:hidden" />
 
