@@ -36,7 +36,7 @@ export function HeroBottom({ data }: HeroBottomProps) {
               </h3>
 
               {/* Description */}
-              <p className="text-gray-400 text-[10px] md:text-[15px] leading-relaxed max-w-[120px] md:max-w-[180px]">
+              <p className="text-gray-500 dark:text-gray-300 text-[10px] md:text-[15px] leading-relaxed max-w-[120px] md:max-w-[180px]">
                 {item.description}
               </p>
 
