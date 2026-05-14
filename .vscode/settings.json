@@ -1,0 +1,117 @@
+{
+  // =========================
+  // PERFORMANCE OPTIMIZATION
+  // =========================
+
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  // Faster file watching
+  "files.watcherExclude": {
+    "**/.git/**": true,
+    "**/.next/**": true,
+    "**/node_modules/**": true,
+    "**/dist/**": true,
+    "**/build/**": true,
+    "**/coverage/**": true,
+    "**/routeTree.gen.ts": true
+  },
+
+  // Faster search indexing
+  "search.exclude": {
+    "**/.next": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/coverage": true,
+    "**/routeTree.gen.ts": true
+  },
+
+  // Prevent editing generated files
+  "files.readonlyInclude": {
+    "**/routeTree.gen.ts": true
+  },
+
+  // Disable language auto detection
+  "workbench.editor.languageDetection": false,
+
+  // Faster TS/JS startup
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "never",
+
+  // Reduce TS server load
+  "typescript.tsserver.experimental.enableProjectDiagnostics": false,
+  "typescript.tsserver.maxTsServerMemory": 4096,
+
+  // Faster editor responsiveness
+  "editor.semanticHighlighting.enabled": false,
+  "editor.hover.enabled": false,
+  "editor.inlineSuggest.enabled": true,
+  "editor.minimap.enabled": false,
+  "editor.lightbulb.enabled": "off",
+
+  // Disable unnecessary scanning
+  "files.exclude": {
+    "**/.next": true,
+    "**/.turbo": true,
+    "**/dist": true,
+    "**/coverage": true
+  },
+
+  // =========================
+  // FORMATTERS
+  // =========================
+
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+  "[jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // =========================
+  // BIOME
+  // =========================
+
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit",
+    "source.fixAll.biome": "explicit"
+  },
+
+  // =========================
+  // NEXT.JS DX
+  // =========================
+
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+
+  // Faster startup
+  "extensions.ignoreRecommendations": true,
+
+  // Reduce git overhead
+  "git.autorefresh": false,
+
+  // Explorer optimization
+  "explorer.compactFolders": false
+}
