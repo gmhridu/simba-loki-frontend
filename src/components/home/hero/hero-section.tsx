@@ -2,23 +2,24 @@ import {
   ArrowRightIcon,
   CrownIcon,
   GemIcon,
-  LeafIcon,
+  HistoryIcon,
   PawPrintIcon,
   ShieldCheckIcon,
+  TruckIcon,
 } from "lucide-react";
 import Image from "next/image";
 import { HeroBottom } from "@/components/home/hero/hero-bottom";
 
 const heroData = [
   {
-    icon: LeafIcon,
-    title: "Ultra Plush Comfort",
-    description: "For deeper, more restful sleep",
+    icon: TruckIcon,
+    title: "Free Premium Delivery",
+    description: "On all orders, delivered with care.",
   },
   {
-    icon: GemIcon,
-    title: "Premium Materials",
-    description: "The finest fabrics built to last",
+    icon: HistoryIcon,
+    title: "30 Day Returns",
+    description: "Love it or return it. No hassle.",
   },
   {
     icon: CrownIcon,
@@ -27,8 +28,13 @@ const heroData = [
   },
   {
     icon: ShieldCheckIcon,
-    title: "Built to Last",
-    description: "Durable, stable and secure",
+    title: "2 Year Warranty",
+    description: "Build to last, Peace of mind.",
+  },
+  {
+    icon: GemIcon,
+    title: "Premium Quality",
+    description: "Only the finest materials for your cat.",
   },
   {
     icon: PawPrintIcon,
@@ -59,31 +65,37 @@ export function HeroSection() {
         <div className="max-w-7xl mx-auto w-full">
           <div className="max-w-2xl space-y-3 md:space-y-4">
             {/* Eyebrow */}
-            <p className="font-semibold text-[10px] md:text-xl tracking-[0.2em] text-primary">
-              DESIGNER CAT BEDS
+            <p className="font-medium text-[10px] md:text-xl text-primary uppercase">
+              The Crown Collection
             </p>
 
             {/* Heading */}
-            <h1 className="text-[1.75rem] sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] md:leading-[0.95] font-light">
-              SLEEP.
+            <h1 className="text-[1.75rem] sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] md:leading-[0.95] font-light uppercase">
+              Luxury.
               <br />
-              LOUNGE.
-              <br />
-              <span className="italic text-primary">BE ROYAL.</span>
+              Elevated.
             </h1>
 
             {/* Description */}
-            <p className="max-w-[220px] sm:max-w-sm text-xs sm:text-sm md:text-lg text-gray-200 leading-relaxed">
-              Our designer cat beds combine timeless design with deep, calming
-              comfort. Because your cat deserves a throne of their own.
+            <p className="max-w-[240px] sm:max-w-sm text-xs sm:text-sm text-foreground/80 leading-relaxed">
+              Floor to ceiling cat trees. Beautifully designed to complement
+              your home and enrich your cat’s life.
             </p>
 
             {/* Button */}
-            <div className="pt-1 md:pt-2">
-              <button className="primary-button group inline-flex items-center gap-2 md:gap-3 py-3! px-6! text-[11px]! md:py-4! md:px-9! md:text-[0.8rem]!">
-                <span>Explore the Collection</span>
-                <ArrowRightIcon className="w-3 h-3 md:w-5 md:h-5 transition-transform duration-300 group-hover:translate-x-1" />
-              </button>
+            <div className="flex items-center gap-6">
+              <div className="pt-1 md:pt-2">
+                <button className="primary-button group inline-flex items-center text-white/80 gap-2 md:gap-3 py-3! px-6! text-[11px]! md:py-4! md:px-9! md:text-[0.8rem]! uppercase">
+                  Shop the Collection
+                </button>
+              </div>
+
+              <div className="pt-1 md:pt-2">
+                <button className="group inline-flex items-center text-primary gap-2 md:gap-3 py-3! px-5! text-[11px]! md:py-4! md:text-[0.8rem]! font-semibold uppercase">
+                  Explore
+                  <ArrowRightIcon className="size-5" />
+                </button>
+              </div>
             </div>
           </div>
         </div>

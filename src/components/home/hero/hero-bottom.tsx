@@ -15,7 +15,7 @@ export function HeroBottom({ data }: HeroBottomProps) {
       <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-primary to-transparent" />
 
       <div className="max-w-[92%] mx-auto px-2 md:px-6">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-y-7 gap-x-3 md:gap-0 relative">
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-y-7 gap-x-3 md:gap-0 relative">
           {data.map((item, index) => (
             <div
               key={index}
