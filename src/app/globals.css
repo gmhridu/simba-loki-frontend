@@ -249,7 +249,7 @@
   }
 
   p {
-    color: var(--muted-text);
+    @apply text-muted-foreground;
     line-height: 1.75;
   }
 }
@@ -292,7 +292,12 @@
 @layer components {
   .primary-button {
     @apply inline-flex items-center justify-center rounded-xl transition-all duration-300;
-    background: linear-gradient(135deg, var(--soft-gold), var(--gold), var(--dark-gold));
+    background: linear-gradient(
+      135deg,
+      var(--soft-gold),
+      var(--gold),
+      var(--dark-gold)
+    );
     color: var(--black);
     padding: 10px 20px;
     /* mobile default — smaller */
@@ -369,16 +374,12 @@
   }
 }
 
-
-
 button {
   @apply cursor-pointer;
 }
 
-
-
 .header-bg {
-  background-image: url('/images/home/hero-image.png');
+  background-image: url("/images/home/hero-image.png");
   background-size: cover;
   /* Try 'contain' if you want full image */
   background-position: center;

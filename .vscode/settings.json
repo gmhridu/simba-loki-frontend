@@ -45,7 +45,7 @@
 
   // Faster editor responsiveness
   "editor.semanticHighlighting.enabled": false,
-  "editor.hover.enabled": false,
+  "editor.hover.enabled": "off",
   "editor.inlineSuggest.enabled": true,
   "editor.minimap.enabled": false,
   "editor.lightbulb.enabled": "off",
@@ -75,7 +75,7 @@
   },
 
   "[typescriptreact]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   "[json]": {
