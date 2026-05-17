@@ -16,7 +16,7 @@ const NAV_LINKS = [
   { label: "SHOP", href: "/shop" },
   { label: "COLLECTIONS", href: "/collections" },
   { label: "ABOUT", href: "/about" },
-  { label: "JOURNAL", href: "/journal" },
+  { label: "CONTACT", href: "/contact" },
 ];
 
 function CrownIcon({ className }: { className?: string }) {
