@@ -8,7 +8,7 @@ import {
   TruckIcon,
 } from "lucide-react";
 import Image from "next/image";
-import { HeroBottom } from "@/components/home/hero/hero-bottom";
+import { FeatureHighlights } from "@/components/shared/feature-highlights";
 
 const heroData = [
   {
@@ -45,66 +45,65 @@ const heroData = [
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden min-h-dvh flex flex-col dark:bg-black text-white">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src="/images/home/hero-image.png"
-          alt="Premium Cat Bed"
-          fill
-          priority
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-linear-to-r from-black via-black/80 to-black/20 md:to-transparent" />
-      </div>
+    <>
+      <section className="relative pt-[117px] overflow-hidden bg-background text-white">
+        {/* HERO IMAGE CONTAINER */}
+        <div className="relative h-[350px] sm:h-[500px] md:h-[780px] w-full">
+          <Image
+            src="/images/home/hero-image.png"
+            alt="Premium Cat Bed"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
 
-      <div className="shrink-0 h-[106px] md:hidden" />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/40 to-transparent" />
 
-      {/* Main Content */}
-      <main className="relative z-10 flex-1 flex items-center px-5 md:px-10 lg:px-16 md:pt-16">
-        <div className="max-w-7xl mx-auto w-full">
-          <div className="max-w-2xl space-y-3 md:space-y-4">
-            {/* Eyebrow */}
-            <p className="font-medium text-[10px] md:text-xl text-primary uppercase">
-              The Crown Collection
-            </p>
+          {/* CONTENT */}
+          <div className="absolute inset-0 z-10 flex items-center">
+            <div className="w-full max-w-7xl mx-auto px-5 sm:px-6 md:px-8">
+              <div className="max-w-[280px] sm:max-w-md md:max-w-2xl space-y-3 md:space-y-5">
+                {/* Eyebrow */}
+                <p className="font-medium text-[10px] sm:text-xs md:text-lg tracking-[0.3em] text-primary uppercase">
+                  The Crown Collection
+                </p>
 
-            {/* Heading */}
-            <h1 className="text-[1.75rem] sm:text-4xl md:text-6xl lg:text-7xl leading-[1.05] md:leading-[0.95] font-light uppercase">
-              Luxury.
-              <br />
-              Elevated.
-            </h1>
+                {/* Heading */}
+                <h1 className="text-[2rem] sm:text-5xl md:text-6xl lg:text-7xl leading-none font-light uppercase">
+                  Luxury.
+                  <br />
+                  Elevated.
+                </h1>
 
-            {/* Description */}
-            <p className="max-w-[240px] sm:max-w-sm text-xs sm:text-sm text-foreground/80 leading-relaxed">
-              Floor to ceiling cat trees. Beautifully designed to complement
-              your home and enrich your cat’s life.
-            </p>
+                {/* Description */}
+                <p className="max-w-[240px] sm:max-w-sm md:max-w-lg text-xs sm:text-sm md:text-base text-white/75 leading-relaxed">
+                  Floor to ceiling cat trees. Beautifully designed to complement
+                  your home and enrich your cat’s life.
+                </p>
 
-            {/* Button */}
-            <div className="flex items-center gap-6">
-              <div className="pt-1 md:pt-2">
-                <button className="primary-button group inline-flex items-center text-white/80 gap-2 md:gap-3 py-3! px-6! text-[11px]! md:py-4! md:px-9! md:text-[0.8rem]! uppercase">
-                  Shop the Collection
-                </button>
-              </div>
+                {/* Buttons */}
+                <div className="flex flex-wrap items-center gap-3 md:gap-5 pt-2">
+                  <button className="primary-button inline-flex items-center justify-center text-white/90 uppercase text-[11px] md:text-sm px-5 py-3 md:px-8 md:py-4">
+                    Shop the Collection
+                  </button>
 
-              <div className="pt-1 md:pt-2">
-                <button className="group inline-flex items-center text-primary gap-2 md:gap-3 py-3! px-5! text-[11px]! md:py-4! md:text-[0.8rem]! font-semibold uppercase">
-                  Explore
-                  <ArrowRightIcon className="size-5" />
-                </button>
+                  <button className="inline-flex items-center gap-2 text-primary font-semibold uppercase text-[11px] md:text-sm">
+                    Explore
+                    <ArrowRightIcon className="size-4 md:size-5" />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </main>
+      </section>
 
-      {/* Hero Bottom */}
-      <div className="relative z-20 mt-auto">
-        <HeroBottom data={heroData} />
-      </div>
-    </section>
+      <FeatureHighlights
+        data={heroData}
+        gridCols="grid-cols-3 md:grid-cols-6"
+      />
+    </>
   );
 }

@@ -1,29 +1,33 @@
 import { LucideIcon } from "lucide-react";
 
-interface HeroBottomProps {
+interface FeatureHighlightsProps {
   data: {
     icon: LucideIcon;
     title: string;
     description: string;
   }[];
+
+  gridCols?: string;
 }
 
-export function HeroBottom({ data }: HeroBottomProps) {
+export function FeatureHighlights({
+  data,
+  gridCols = "grid-cols-2 md:grid-cols-3 lg:grid-cols-6",
+}: FeatureHighlightsProps) {
   return (
-    <div className="relative dark:bg-[#0A0A0A] bg-background py-6 md:py-12 border-t border-b border-border">
+    <div className="relative dark:bg-[#0A0A0A] bg-background py-6 md:py-12 border-y border-border">
+      {/* Top Border */}
       <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-primary to-transparent" />
+
+      {/* Bottom Border */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-primary to-transparent" />
 
       <div className="max-w-[92%] mx-auto px-2 md:px-6">
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-y-7 gap-x-3 md:gap-0 relative">
+        <div className={`grid ${gridCols} gap-y-7 gap-x-3 md:gap-0 relative`}>
           {data.map((item, index) => (
             <div
               key={index}
-              className={`flex flex-col items-center text-center group relative px-2 md:px-4
-                ${index === data.length - 1 && data.length % 2 !== 0
-                  ? "col-span-2 md:col-span-1"
-                  : ""
-                }`}
+              className="flex flex-col items-center text-center group relative px-2 md:px-4"
             >
               {/* Icon */}
               <div className="mb-2 md:mb-6">

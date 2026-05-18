@@ -80,6 +80,7 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   className="hover:text-brand-gold transition-colors duration-200"
+                  prefetch={true}
                 >
                   {link.label}
                 </Link>

@@ -60,10 +60,10 @@ export function ProductHero({ product }: ProductHeroProps) {
             alt={product.name}
             fill
             priority
-            className="object-cover object-center lg:object-right-top"
+            className="object-cover object-center lg:object-top-right"
             sizes="(min-width: 1024px) 60vw, 100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-background/5 via-transparent to-background/50 lg:to-background" />
+          <div className="absolute inset-0 bg-linear-to-b lg:bg-linear-to-r from-background/5 via-transparent to-background/50 lg:to-background" />
 
           {/* Dimension label */}
           <div className="absolute w-full left-[9.5%] top-1/2 -translate-y-1/2">
@@ -94,7 +94,7 @@ export function ProductHero({ product }: ProductHeroProps) {
 
         {/* RIGHT PANEL - Precise Mobile Alignment */}
         <div className="relative flex w-full items-center justify-center px-6 py-12 sm:px-12 lg:w-[560px] lg:px-14 lg:py-0">
-          <div className="absolute inset-0 bg-background lg:bg-gradient-to-b lg:from-background lg:via-background/95 lg:to-background" />
+          <div className="absolute inset-0 bg-background lg:bg-linear-to-b lg:from-background lg:via-background/95 lg:to-background" />
           <div className="absolute inset-y-0 left-0 hidden lg:block border-l border-primary/20" />
           <div className="absolute inset-x-0 top-0 lg:hidden border-t border-primary/20" />
 
