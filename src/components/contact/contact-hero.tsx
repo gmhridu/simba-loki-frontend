@@ -4,7 +4,7 @@ import { Mail, Phone, MessageCircle, MapPin } from "lucide-react";
 export function ContactHero() {
   return (
     <section className="bg-background text-foreground pt-16 lg:pt-32 lg:pb-0 mt-20 md:mt-0 px-6 md:px-0">
-      <div className="grid lg:grid-cols-[40%_60%] min-h-[800px] gap-10">
+      <div className="grid lg:grid-cols-[40%_60%] min-h-[800px] gap-10 overflow-hidden">
         {/* Left Content */}
         <div className="space-y-10  md:ml-16 lg:ml-32">
           <div className="space-y-4 pt-2">
@@ -97,13 +97,13 @@ export function ContactHero() {
         </div>
 
         {/* Right Image */}
-        <div className="relative h-[800px] lg:h-auto">
+        <div className="relative h-[800px] lg:h-auto w-full">
           <Image
             fill
             priority
             src="/images/collections/charcoal-grey.png"
             alt="Charcoal Grey Cat Tree"
-            className="object-c"
+            // className="object-cover"
             sizes="100vw"
           />
         </div>
