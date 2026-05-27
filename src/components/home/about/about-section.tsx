@@ -2,6 +2,7 @@ import { ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReviewSlider } from "./review-slider";
+import { FeaturesSection } from "./features-section";
 
 export default function AboutSection() {
   return (
@@ -60,6 +61,7 @@ export default function AboutSection() {
         </div>
       </section>
       <ReviewSlider />
+      <FeaturesSection />
     </>
   );
 }

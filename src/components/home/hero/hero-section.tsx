@@ -46,9 +46,9 @@ const heroData = [
 export function HeroSection() {
   return (
     <>
-      <section className="relative pt-[117px] overflow-hidden bg-background text-white">
+      <section className="relative pt-29.25 overflow-hidden bg-background text-white">
         {/* HERO IMAGE CONTAINER */}
-        <div className="relative h-[350px] sm:h-[500px] md:h-[780px] w-full">
+        <div className="relative h-87.5 sm:h-125 md:h-195 w-full">
           <Image
             src="/images/home/hero-image.png"
             alt="Premium Cat Bed"
@@ -64,7 +64,7 @@ export function HeroSection() {
           {/* CONTENT */}
           <div className="absolute inset-0 z-10 flex items-center">
             <div className="w-full mx-auto px-12 sm:px-16 md:px-32">
-              <div className="max-w-[280px] sm:max-w-md md:max-w-2xl space-y-3 md:space-y-5">
+              <div className="max-w-70 sm:max-w-md md:max-w-2xl space-y-3 md:space-y-5">
                 {/* Eyebrow */}
                 <p className="font-medium text-[10px] sm:text-xs md:text-lg tracking-[0.3em] text-primary uppercase">
                   The Crown Collection
@@ -78,7 +78,7 @@ export function HeroSection() {
                 </h1>
 
                 {/* Description */}
-                <p className="max-w-[240px] sm:max-w-sm md:max-w-lg text-xs sm:text-sm md:text-base text-white/75 leading-relaxed">
+                <p className="max-w-60 sm:max-w-sm md:max-w-lg text-xs sm:text-sm md:text-base text-white/75 leading-relaxed">
                   Floor to ceiling cat trees. Beautifully designed to complement
                   your home and enrich your cat’s life.
                 </p>
