@@ -27,6 +27,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${cinzel.variable} ${inter.variable}`}
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
       <body>
