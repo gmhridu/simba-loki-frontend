@@ -48,7 +48,7 @@ export function ReviewSlider() {
 
   return (
     <div
-      className="relative w-full bg-[#0A0A0A] px-14 sm:px-20 py-10 sm:py-12 overflow-hidden"
+      className="relative w-full dark:bg-[#0A0A0A] px-14 sm:px-20 py-10 sm:py-12 overflow-hidden"
       style={{
         fontFamily: "'Cormorant Garamond', serif",
       }}
