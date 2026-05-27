@@ -87,11 +87,10 @@ export function ReviewSlider() {
 
         {/* Review text */}
         <p
-          className="italic leading-relaxed mx-auto mb-5 px-4 transition-all duration-400"
+          className="italic text-black/90 dark:text-[#F0EDE8] leading-relaxed mx-auto mb-5 px-4 transition-all duration-400"
           style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(15px, 2.5vw, 19px)",
-            color: "#F0EDE8",
             maxWidth: "580px",
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(10px)",
@@ -121,13 +120,12 @@ export function ReviewSlider() {
 
           {/* Author */}
           <p
-            className="transition-opacity duration-400 delay-150"
+            className="transition-opacity text-black/90 dark:text-[#C9A96E] duration-400 delay-150"
             style={{
               fontFamily: "'Montserrat', sans-serif",
               fontSize: "clamp(10px, 1.5vw, 12px)",
               fontWeight: 600,
               letterSpacing: "3px",
-              color: "rgba(201,169,110,0.7)",
               opacity: visible ? 1 : 0,
             }}
           >
@@ -138,7 +136,7 @@ export function ReviewSlider() {
         {/* Left Arrow */}
         <button
           onClick={prevReview}
-          className="absolute left-0 top-1/2 -translate-y-1/2 p-2 transition-all duration-200 hover:scale-110"
+          className="absolute left-0 top-1/2 -translate-y-1/2  p-2 transition-all duration-200 hover:scale-110"
           style={{
             color: "#C9A96E",
             opacity: 0.75,
@@ -180,7 +178,7 @@ export function ReviewSlider() {
               width: i === currentIndex ? "9px" : "6px",
               height: i === currentIndex ? "9px" : "6px",
               background:
-                i === currentIndex ? "#C9A96E" : "rgba(255,255,255,0.2)",
+                i === currentIndex ? "#C9A96E" : "#4a5565",
               transform: i === currentIndex ? "scale(1)" : "scale(1)",
             }}
           />
