@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cinzel, Inter } from "next/font/google";
+import { Cinzel, Inter, Allura } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/shared/theme-provider";
 
@@ -11,6 +11,12 @@ export const cinzel = Cinzel({
 export const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body",
+});
+
+export const allura = Allura({
+  subsets: ["latin"],
+  variable: "--font-signature",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cinzel.variable} ${inter.variable}`}
+      className={`${cinzel.variable} ${inter.variable} ${allura.variable}`}
       suppressHydrationWarning
     >
       <body>

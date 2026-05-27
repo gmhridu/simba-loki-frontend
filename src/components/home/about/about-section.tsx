@@ -1,50 +1,14 @@
-import { FeatureHighlights } from "@/components/shared/feature-highlights";
-import {
-  ArrowRightIcon,
-  HeadsetIcon,
-  HeartIcon,
-  HomeIcon,
-  Layers3Icon,
-  LayersIcon,
-  LeafIcon,
-} from "lucide-react";
+import { ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
-const features = [
-  {
-    icon: LeafIcon,
-    title: "SUSTAINABLY SOURCED",
-    description: "Responsible materials, consciously chosen.",
-  },
-  {
-    icon: LayersIcon,
-    title: "BUILT TO LAST",
-    description: "Reinforced structure for maximum stability.",
-  },
-  {
-    icon: HeartIcon,
-    title: "CAT FIRST DESIGN",
-    description: "Thoughtful details for comfort, enrichment and safety.",
-  },
-  {
-    icon: HomeIcon,
-    title: "MADE TO BLEND IN",
-    description: "Timeless designs that elevate your space.",
-  },
-  {
-    icon: HeadsetIcon,
-    title: "DEDICATED SUPPORT",
-    description: "Our concierge team is here to help.",
-  },
-];
+import { ReviewSlider } from "./review-slider";
 
 export default function AboutSection() {
   return (
     <>
       <section className="relative w-full overflow-hidden border-t border-primary bg-background">
         {/* Background Image */}
-        <div className="relative w-full h-[280px] sm:h-[500px] md:h-[620px]">
+        <div className="relative w-full h-70 sm:h-125 md:h-155">
           <Image
             src="/images/about/about.png"
             alt="Luxury Cat Furniture"
@@ -95,7 +59,7 @@ export default function AboutSection() {
           </div>
         </div>
       </section>
-      <FeatureHighlights data={features} gridCols="grid-cols-3 md:grid-cols-5" />
+      <ReviewSlider />
     </>
   );
 }

@@ -8,11 +8,13 @@ interface FeatureHighlightsProps {
   }[];
 
   gridCols?: string;
+  children?: React.ReactNode;
 }
 
 export function FeatureHighlights({
   data,
   gridCols = "grid-cols-2 md:grid-cols-3 lg:grid-cols-6",
+  children,
 }: FeatureHighlightsProps) {
   return (
     <div className="relative dark:bg-[#0A0A0A] bg-background py-6 md:py-12 border-y border-border">
@@ -21,6 +23,8 @@ export function FeatureHighlights({
 
       {/* Bottom Border */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-primary to-transparent" />
+
+      {children}
 
       <div className="max-w-[92%] mx-auto px-2 md:px-6">
         <div className={`grid ${gridCols} gap-y-7 gap-x-3 md:gap-0 relative`}>
@@ -40,7 +44,7 @@ export function FeatureHighlights({
               </h3>
 
               {/* Description */}
-              <p className="text-gray-500 dark:text-gray-300 text-[10px] md:text-[15px] leading-relaxed max-w-[120px] md:max-w-[180px]">
+              <p className="text-gray-500 dark:text-gray-300 text-[10px] md:text-[15px] leading-relaxed max-w-30 md:max-w-45">
                 {item.description}
               </p>
 

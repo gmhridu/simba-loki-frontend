@@ -11,6 +11,7 @@
 :root {
   --font-heading: "Cinzel", serif;
   --font-body: "Inter", sans-serif;
+  --font-signature: "Allura", cursive;
 }
 
 /* =========================================================
@@ -292,12 +293,10 @@
 @layer components {
   .primary-button {
     @apply inline-flex items-center justify-center rounded-xl transition-all duration-300;
-    background: linear-gradient(
-      135deg,
-      var(--soft-gold),
-      var(--gold),
-      var(--dark-gold)
-    );
+    background: linear-gradient(135deg,
+        var(--soft-gold),
+        var(--gold),
+        var(--dark-gold));
     color: var(--black);
     padding: 10px 20px;
     /* mobile default — smaller */
