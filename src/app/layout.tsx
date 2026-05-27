@@ -33,6 +33,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${cinzel.variable} ${inter.variable} ${allura.variable}`}
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
       <body>
