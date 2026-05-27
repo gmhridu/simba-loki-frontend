@@ -63,7 +63,7 @@ export function HeroSection() {
 
           {/* CONTENT */}
           <div className="absolute inset-0 z-10 flex items-center">
-            <div className="w-full max-w-7xl mx-auto px-5 sm:px-6 md:px-8">
+            <div className="w-full mx-auto px-12 sm:px-16 md:px-32">
               <div className="max-w-[280px] sm:max-w-md md:max-w-2xl space-y-3 md:space-y-5">
                 {/* Eyebrow */}
                 <p className="font-medium text-[10px] sm:text-xs md:text-lg tracking-[0.3em] text-primary uppercase">
